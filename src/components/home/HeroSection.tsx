@@ -81,11 +81,13 @@ export default function HeroSection() {
             </div>
             {/* Floating accent card */}
             <div className="absolute -bottom-6 -left-6 bg-white rounded-2xl shadow-lg p-4 flex items-center gap-3">
-              <div className="w-12 h-12 rounded-full bg-aqua-100 flex items-center justify-center">
-                <svg viewBox="0 0 24 24" className="w-6 h-6 text-aqua-700" fill="currentColor">
-                  <path d="M12 2C12 2 5 10 5 15a7 7 0 0014 0C19 10 12 2 12 2zm0 18a5 5 0 01-5-5c0-3.5 5-9.5 5-9.5s5 6 5 9.5a5 5 0 01-5 5z" />
-                </svg>
-              </div>
+              <Image
+                src="/images/logo/logo only.jpeg"
+                alt="BANT"
+                width={48}
+                height={48}
+                className="w-12 h-12 object-contain rounded-lg"
+              />
               <div>
                 <div className="text-sm font-bold text-aqua-900">BANT</div>
                 <div className="text-xs text-foreground/50">Trusted Wellness Clinic</div>

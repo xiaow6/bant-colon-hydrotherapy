@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import { MapPin, Phone, Clock, Mail } from 'lucide-react';
 import { BUSINESS_NAME, BUSINESS_PHONE, BUSINESS_ADDRESS, BUSINESS_EMAIL, NAV_LINKS } from '@/lib/constants';
@@ -9,16 +10,14 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {/* Brand & Quick Links */}
           <div>
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 rounded-full bg-aqua-400/20 flex items-center justify-center">
-                <svg viewBox="0 0 24 24" className="w-6 h-6 text-aqua-300" fill="currentColor">
-                  <path d="M12 2C12 2 5 10 5 15a7 7 0 0014 0C19 10 12 2 12 2zm0 18a5 5 0 01-5-5c0-3.5 5-9.5 5-9.5s5 6 5 9.5a5 5 0 01-5 5z" />
-                </svg>
-              </div>
-              <div>
-                <span className="font-heading text-lg font-bold block">{BUSINESS_NAME.split(' ')[0]}</span>
-                <span className="text-[10px] tracking-wider uppercase text-aqua-300 block">Colon Hydrotherapy</span>
-              </div>
+            <div className="mb-4">
+              <Image
+                src="/images/logo/logo only.jpeg"
+                alt="BANT Colon Hydrotherapy"
+                width={48}
+                height={48}
+                className="h-12 w-12 object-contain rounded-lg"
+              />
             </div>
             <p className="text-sm text-aqua-200/80 mb-6">
               Professional colon hydrotherapy in a calm, private, and professional environment.
