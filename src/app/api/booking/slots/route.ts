@@ -2,6 +2,27 @@ import { NextRequest, NextResponse } from 'next/server';
 import { generateSlots, timesOverlap } from '@/lib/booking';
 import { isSupabaseConfigured, mock } from '@/lib/mock';
 
+function buildSlots(
+  possibleSlots: { start: string; end: string }[],
+  devices: { id: string }[],
+  bookings: { device_id: string; start_time: string; end_time: string }[]
+) {
+  return possibleSlots.map((slot) => {
+    const availableDevices = devices.filter(
+      (device) => !bookings.some(
+        (b) => b.device_id === device.id && timesOverlap(slot.start, slot.end, b.start_time, b.end_time)
+      )
+    );
+    return {
+      start_time: slot.start,
+      end_time: slot.end,
+      total_devices: devices.length,
+      available_devices: availableDevices.map((d) => d.id),
+      booked_count: devices.length - availableDevices.length,
+    };
+  });
+}
+
 export async function GET(request: NextRequest) {
   const searchParams = request.nextUrl.searchParams;
   const date = searchParams.get('date');
@@ -35,17 +56,9 @@ export async function GET(request: NextRequest) {
 
     const { data: existingBookings } = await supabase.from('bookings').select('*').eq('date', date).in('status', ['locked', 'pending_payment', 'confirmed']);
     const bookings = existingBookings || [];
-
     const possibleSlots = generateSlots(sessionType.duration_minutes);
-    const availableSlots = possibleSlots
-      .map((slot) => ({
-        start_time: slot.start,
-        end_time: slot.end,
-        available_devices: devices.filter((device) => !bookings.some((b) => b.device_id === device.id && timesOverlap(slot.start, slot.end, b.start_time, b.end_time))).map((d) => d.id),
-      }))
-      .filter((slot) => slot.available_devices.length > 0);
 
-    return NextResponse.json({ date, slots: availableSlots });
+    return NextResponse.json({ date, total_devices: devices.length, slots: buildSlots(possibleSlots, devices, bookings) });
   }
 
   // --- Mock mode ---
@@ -60,13 +73,5 @@ export async function GET(request: NextRequest) {
   const bookings = mock.getBookingsForDate(date);
   const possibleSlots = generateSlots(sessionType.duration_minutes);
 
-  const availableSlots = possibleSlots
-    .map((slot) => ({
-      start_time: slot.start,
-      end_time: slot.end,
-      available_devices: devices.filter((device) => !bookings.some((b) => b.device_id === device.id && timesOverlap(slot.start, slot.end, b.start_time, b.end_time))).map((d) => d.id),
-    }))
-    .filter((slot) => slot.available_devices.length > 0);
-
-  return NextResponse.json({ date, slots: availableSlots });
+  return NextResponse.json({ date, total_devices: devices.length, slots: buildSlots(possibleSlots, devices, bookings) });
 }

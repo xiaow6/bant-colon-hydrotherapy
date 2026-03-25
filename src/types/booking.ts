@@ -17,7 +17,9 @@ export interface Device {
 export interface TimeSlot {
   start_time: string;
   end_time: string;
+  total_devices: number;
   available_devices: string[];
+  booked_count: number;
 }
 
 export interface Booking {
