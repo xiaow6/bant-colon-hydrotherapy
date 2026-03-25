@@ -12,11 +12,11 @@ export default function Footer() {
           <div>
             <div className="mb-4">
               <Image
-                src="/images/logo/logo only.jpeg"
+                src="/images/logo/logo-icon.png"
                 alt="BANT Colon Hydrotherapy"
                 width={48}
                 height={48}
-                className="h-12 w-12 object-contain rounded-lg"
+                className="h-12 w-12 object-contain"
               />
             </div>
             <p className="text-sm text-aqua-200/80 mb-6">

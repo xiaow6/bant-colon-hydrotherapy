@@ -31,15 +31,19 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center">
+          <Link href="/" className="flex items-center gap-2">
             <Image
-              src="/images/logo/logo with words.jpeg"
+              src="/images/logo/logo-icon.png"
               alt="BANT Colon Hydrotherapy"
-              width={160}
-              height={48}
-              className="h-12 w-auto object-contain"
+              width={40}
+              height={40}
+              className="h-10 w-10 object-contain"
               priority
             />
+            <div>
+              <span className="font-heading text-lg font-bold leading-tight block text-aqua-800">BANT</span>
+              <span className="text-[10px] tracking-wider uppercase leading-tight block text-foreground/50">Colon Hydrotherapy</span>
+            </div>
           </Link>
 
           {/* Desktop nav */}

@@ -82,11 +82,11 @@ export default function HeroSection() {
             {/* Floating accent card */}
             <div className="absolute -bottom-6 -left-6 bg-white rounded-2xl shadow-lg p-4 flex items-center gap-3">
               <Image
-                src="/images/logo/logo only.jpeg"
+                src="/images/logo/logo-icon.png"
                 alt="BANT"
                 width={48}
                 height={48}
-                className="w-12 h-12 object-contain rounded-lg"
+                className="w-12 h-12 object-contain"
               />
               <div>
                 <div className="text-sm font-bold text-aqua-900">BANT</div>
