@@ -7,8 +7,8 @@ export default function EmotionalSelling() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="relative rounded-2xl overflow-hidden h-[400px] lg:h-[500px]">
             <Image
-              src="/images/about/happy-people.png"
-              alt="Happy, healthy people"
+              src="/images/clinic/treatment-female-2.jpeg"
+              alt="Client relaxing during colon hydrotherapy at BANT"
               fill
               className="object-cover"
             />

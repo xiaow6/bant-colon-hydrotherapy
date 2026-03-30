@@ -19,7 +19,7 @@ const services = [
       'Personalised aftercare guidance',
       'Hydration & recovery support',
     ],
-    image: '/images/benefits/detox.jpeg',
+    image: '/images/clinic/treatment-female.jpeg',
   },
   {
     name: 'Maintenance Session',
@@ -31,7 +31,7 @@ const services = [
       'Updated aftercare recommendations',
       'Hydration & recovery support',
     ],
-    image: '/images/benefits/detox-alt.jpeg',
+    image: '/images/clinic/treatment-male.jpeg',
   },
 ];
 
@@ -106,6 +106,41 @@ export default function ServicesPage() {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Our Equipment */}
+      <section className="py-16 md:py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="relative rounded-2xl overflow-hidden h-[350px]">
+              <Image
+                src="/images/clinic/equipment-empty.jpeg"
+                alt="BANT modern colon hydrotherapy equipment"
+                fill
+                className="object-cover"
+              />
+            </div>
+            <div>
+              <h2 className="font-heading text-3xl font-bold text-aqua-900 mb-4">
+                What is Colon Hydrotherapy?
+              </h2>
+              <p className="text-foreground/70 leading-relaxed mb-6">
+                Colon hydrotherapy is a gentle cleansing process that uses warm, purified water to
+                help remove waste and toxins from the colon. This treatment supports better digestion,
+                improved nutrient absorption, and overall wellbeing.
+              </p>
+              <h3 className="font-heading text-lg font-semibold text-aqua-800 mb-3">Who Can Benefit?</h3>
+              <ul className="space-y-2 text-foreground/70 text-sm">
+                {['Constipation or irregular bowel movements', 'Bloating and gas', 'Fatigue or low energy', 'Poor digestion', 'Detox or lifestyle reset goals', 'Weight management support'].map((item, i) => (
+                  <li key={i} className="flex items-center gap-2">
+                    <CheckCircle2 size={16} className="text-aqua-500 shrink-0" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
       </section>

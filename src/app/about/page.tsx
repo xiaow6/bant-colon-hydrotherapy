@@ -28,25 +28,27 @@ export default function AboutPage() {
               </h1>
               <div className="space-y-4 text-foreground/70 leading-relaxed">
                 <p>
-                  BANT Colon Hydrotherapy was founded with a vision to provide safe,
-                  accessible, and high-quality digestive wellness care in South Africa.
+                  At BANT Colon Hydrotherapy, we believe that true wellness begins in the gut.
+                  Our mission is to support your body&apos;s natural detoxification process through
+                  safe and effective colon hydrotherapy treatments.
                 </p>
                 <p>
-                  We recognised that many people struggle with digestive discomfort,
-                  low energy, and the effects of modern lifestyles on their gut health.
-                  Our mission is to provide a professional, comfortable space where
-                  clients can take a proactive step towards better health.
+                  We provide a calm, private, and professional environment where your comfort
+                  and dignity are our priority. Whether you are looking to improve digestion,
+                  reduce bloating, boost energy, or begin a wellness journey, we are here to
+                  guide and support you every step of the way.
                 </p>
                 <p>
                   Based in Roodepoort&apos;s Cascades Shopping Centre, we serve clients
-                  from across the West Rand and greater Johannesburg area.
+                  from across the West Rand and greater Johannesburg area with modern,
+                  state-of-the-art equipment and trained professionals.
                 </p>
               </div>
             </div>
             <div className="relative rounded-2xl overflow-hidden h-[350px] lg:h-[450px]">
               <Image
-                src="/images/about/happy-people.png"
-                alt="Happy, healthy people - the BANT community"
+                src="/images/clinic/treatment-female.jpeg"
+                alt="Client relaxing during a colon hydrotherapy session at BANT"
                 fill
                 className="object-cover"
               />
@@ -55,8 +57,40 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Philosophy */}
+      {/* Our Facility */}
       <section className="py-16 md:py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="relative rounded-2xl overflow-hidden h-[350px] lg:h-[400px] order-2 lg:order-1">
+              <Image
+                src="/images/clinic/equipment-empty.jpeg"
+                alt="BANT modern colon hydrotherapy equipment"
+                fill
+                className="object-cover"
+              />
+            </div>
+            <div className="order-1 lg:order-2">
+              <h2 className="font-heading text-3xl md:text-4xl font-bold text-aqua-900 mb-6">
+                Our Facility
+              </h2>
+              <div className="space-y-4 text-foreground/70 leading-relaxed">
+                <p>
+                  Our clinic features modern, state-of-the-art colon hydrotherapy equipment
+                  in a calm, spa-like setting. Each treatment room is private, comfortable,
+                  and designed to put you completely at ease.
+                </p>
+                <p>
+                  We use single-use, disposable materials and follow strict hygiene protocols.
+                  Your health and safety are non-negotiable.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Philosophy */}
+      <section className="py-16 md:py-20 bg-aqua-50/50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="font-heading text-3xl md:text-4xl font-bold text-aqua-900 mb-6">
             Our Philosophy
@@ -73,7 +107,7 @@ export default function AboutPage() {
       </section>
 
       {/* Values */}
-      <section className="py-16 md:py-20 bg-aqua-50/50">
+      <section className="py-16 md:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="font-heading text-3xl md:text-4xl font-bold text-aqua-900 mb-12 text-center">
             Our Values
@@ -89,6 +123,20 @@ export default function AboutPage() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Testimonial */}
+      <section className="py-16 md:py-20 bg-sage-50">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="font-heading text-3xl font-bold text-aqua-900 mb-8">
+            What Our Clients Say
+          </h2>
+          <blockquote className="text-lg text-foreground/70 italic leading-relaxed mb-4">
+            &ldquo;I felt lighter and more energized after my session at BANT Colon Hydrotherapy.
+            The environment was clean, professional, and very welcoming. Highly recommend!&rdquo;
+          </blockquote>
+          <p className="text-sm font-semibold text-aqua-700">&mdash; Happy Client</p>
         </div>
       </section>
 

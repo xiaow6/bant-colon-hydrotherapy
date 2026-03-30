@@ -93,6 +93,46 @@ export default function BenefitsPage() {
         </div>
       </section>
 
+      {/* Before & After */}
+      <section className="py-16 md:py-20 bg-sage-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="font-heading text-3xl md:text-4xl font-bold text-aqua-900 mb-4">
+            The Difference Inside
+          </h2>
+          <p className="text-foreground/60 mb-8 max-w-2xl mx-auto">
+            Colon hydrotherapy helps remove accumulated waste, supporting your body&apos;s
+            natural detoxification and improving nutrient absorption.
+          </p>
+          <div className="relative rounded-2xl overflow-hidden max-w-xl mx-auto">
+            <Image
+              src="/images/infographic/before-after.jpeg"
+              alt="Before and after colon hydrotherapy — cleaner, healthier colon"
+              width={600}
+              height={300}
+              className="w-full h-auto"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Wellness Infographic */}
+      <section className="py-16 md:py-20">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="font-heading text-3xl font-bold text-aqua-900 mb-8">
+            Your Gut Controls More Than You Think
+          </h2>
+          <div className="relative rounded-2xl overflow-hidden">
+            <Image
+              src="/images/infographic/wellness-grid.png"
+              alt="How colon hydrotherapy improves your overall wellness"
+              width={1200}
+              height={800}
+              className="w-full h-auto"
+            />
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="py-16 md:py-20 bg-aqua-800 text-white text-center">
         <div className="max-w-3xl mx-auto px-4">

@@ -69,10 +69,10 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Map */}
+          {/* Map & QR */}
           <div>
             <h3 className="font-heading text-lg font-semibold mb-4">Find Us</h3>
-            <div className="rounded-lg overflow-hidden h-48">
+            <div className="rounded-lg overflow-hidden h-40 mb-4">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3581.5!2d27.906!3d-26.107!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sCascades+Shopping+Centre+Little+Falls!5e0!3m2!1sen!2sza!4v1"
                 width="100%"
@@ -83,6 +83,16 @@ export default function Footer() {
                 referrerPolicy="no-referrer-when-downgrade"
                 title="BANT Colon Hydrotherapy Location"
               />
+            </div>
+            <div className="flex items-center gap-3">
+              <Image
+                src="/images/logo/qr-code.jpeg"
+                alt="Scan to contact BANT"
+                width={72}
+                height={72}
+                className="rounded-lg"
+              />
+              <p className="text-xs text-aqua-200/60">Scan to connect with us</p>
             </div>
           </div>
         </div>
